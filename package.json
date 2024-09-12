@@ -1,17 +1,18 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just Another Text Editor (J.A.T.E) - A Progressive Web App (PWA) text editor",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm run build && node server.js",
+    "server": "nodemon server.js",
+    "build": "webpack --mode production",
+    "install": "cd client && npm install",
+    "client": "webpack-dev-server --open --hot",
+    "heroku-postbuild": "npm run install && npm run build"
   },
-  "keywords": [],
+  "keywords": ["PWA", "Text Editor", "Webpack", "Workbox", "IndexedDB"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -20,6 +21,12 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-pwa-manifest": "^4.3.0",
+    "workbox-webpack-plugin": "^6.2.4"
   }
 }
+
