@@ -7,7 +7,7 @@
     "start": "node server/server.js",
     "start:dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/server.js",
-    "client": "webpack serve --open --hot",
+    "client": "webpack serve --open --hot --config ./client/webpack.config.js",
     "build": "webpack --mode production --config ./client/webpack.config.js",
     "install": "cd client && npm install"
   },
