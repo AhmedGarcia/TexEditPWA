@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J.A.T.E</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     
       <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
@@ -17,14 +17,6 @@
       <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css">
       </link>
-
-      <!-- PWA Theme Color -->
-      <meta name="theme-color" content="#225cca" />
-
-    <!-- Manifest and Other Tags -->
-    <link rel="manifest" href="/manifest.webmanifest"></link>
-
-    
   </head>
   <body>
     <nav id="navbar">
@@ -34,7 +26,7 @@
      <h1> Just Another Text Editor</h1>
      
       <div class="navbar-brand" 
-            ><img src="/assets/icons/icon_96x96.png" alt="App Logo"
+            ><img src="./assets/icons/icon_96x96.png"
           /></div>
     </nav>
 

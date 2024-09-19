@@ -108,9 +108,9 @@ const loadSpinner = () => {
   spinner.classList.add('spinner');
   spinner.innerHTML = `
   <div class="loading-container">
-  <div class="loading-spinner" />
+    <div class="loading-spinner"></div> <!-- Updated closing div -->
   </div>
-  `;
+`;
   main.appendChild(spinner);
 };
 
