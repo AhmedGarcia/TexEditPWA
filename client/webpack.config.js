@@ -7,7 +7,7 @@ module.exports = () => {
 
   
   return {
-    mode: "production",
+    mode: "development",
     entry: {
       main: './src/js/index.js',  // Adjusted path
       install: './src/js/install.js',  // Adjusted path
