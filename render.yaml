@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: my-service
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PRODUCTION
+        value: false
+      - key: PROGRESS
+        value: false
